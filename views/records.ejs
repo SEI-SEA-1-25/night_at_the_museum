@@ -1,0 +1,21 @@
+<h1>Here are your search results!</h1>
+<div class="records">
+<% searchQuery.forEach(query => { %> 
+    <h3>Title: <%=query.title %> </h3>
+    <img src="<%=query.primaryimageurl%>" width="300px" alt="No Image Available">
+    <h5>Division: <%=query.division %></h5>
+    <h5>Culture: <%=query.culture %></h5>
+    
+    <form method= "POST" action="/popular-works">
+        <input type="hidden" name="objectid" value="<%=query.objectid%>">
+        <input type="hidden" name="title" value="<%=query.title%>">
+        <input type="hidden" name="primaryimageurl" value="<%=query.primaryimageurl%>">
+        <input type="hidden" name="division" value="<%=query.division%>">
+        <input type="hidden" name="culture" value="<%=query.culture%>">
+        
+        <label></label>
+        <input class = "add-btn" type="submit" value= "Add this to Your Popular Works">
+    </form>
+<% }) %> 
+
+</div>
