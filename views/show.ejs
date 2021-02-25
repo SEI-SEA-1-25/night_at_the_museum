@@ -1,0 +1,14 @@
+<h1>This is a exhibiton information page</h1>
+
+
+
+
+
+
+<% allExhibition.forEach(exhibition => { %>
+    <h3 id="title"> The title: <%= exhibition.title %></h3>
+    <h3 id="url"> The url: <%= exhibition.url %></h3>
+    <form method="POST" action="/exhibition/?_method=PUT">
+        <input type="submit" value="Go to G" />
+    </form>
+<% }) %>

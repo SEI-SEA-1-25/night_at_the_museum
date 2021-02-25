@@ -6,12 +6,13 @@ const ejsLayouts = require('express-ejs-layouts')
 const rowdy = require('rowdy-logger')
 const axios = require('axios')
 
+const EXHIBITION_API_KEY = process.env.EXHIBITION_API_KEY // EXHIBITION_API_KEY = 30967c76-68e7-428e-90d8-713eb7414823
 
-const OMDB_API_KEY = process.env.OMDB_API_KEY
+// https://api.harvardartmuseums.org/exhibition?apikey=30967c76-68e7-428e-90d8-713eb7414823
 
 // configure express app
 const app = express()
-const PORT = 3000
+const PORT = 4000
 // (╯°□°）╯︵ ┻━┻
 const rowdyResults = rowdy.begin(app)
 
@@ -33,15 +34,20 @@ app.get('/', async (req, res) => {
 })
 
 
+app.get('/exhibition', async (req, res) => {
+    try {
+        const allExhibition = await axios.get(`https://api.harvardartmuseums.org/exhibition?apikey=${EXHIBITION_API_KEY}&q=${req.query.search}`)
+        res.render('show.ejs', { allExhibition: allExhibition.data.records })
+    } catch (err) {
+        console.log(err);
+    }
+})
 
 
 
-
-
-
-
-
-
+app.get('*', (req, res) => {
+    res.render('404')
+  })
 
 // The app.listen function returns a server handle
 app.listen(PORT, () => {
