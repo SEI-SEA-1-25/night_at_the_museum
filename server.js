@@ -2,7 +2,7 @@
 const express = require("express");
 const ejsLayouts = require("express-ejs-layouts");
 const rowdy = require("rowdy-logger");
-
+const axios = require("axios");
 // configure express app
 const app = express();
 const PORT = 3000;
@@ -23,6 +23,11 @@ app.use(require("morgan")("dev"));
 // Routes
 app.get("/", function (req, res) {
   res.send("Hello, backend!");
+});
+
+// Routes
+app.get("/test", function (req, res) {
+  res.render("index.ejs");
 });
 
 // The app.listen function returns a server handle
