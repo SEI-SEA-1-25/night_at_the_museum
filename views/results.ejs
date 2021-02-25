@@ -3,4 +3,8 @@
 <% records.forEach(record => { %>
     <h4><%= record.title %> </h4>
     <img src="<%= record.primaryimageurl %>" alt="<%= record.title %> " width=200px />
+    <form action="/favorites" method="POST">
+        <input type="hidden" name="id" value="<%=records.id%>">
+        <input type="submit" value="Delete">
+    </form>
 <% }) %>

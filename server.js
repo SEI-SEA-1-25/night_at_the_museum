@@ -25,8 +25,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(require('morgan')('dev'))
 //morgan
 app.use(morgan('tiny'))
-//static
-app.use()
+
 
 // Routes
 app.get('/', function(req, res) {
