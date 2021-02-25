@@ -1,0 +1,13 @@
+<h1>Search Results</h1>
+<% let worksWithPics = [] %>
+<% works.forEach(work => { %>
+    <% if(work.primaryimageurl != null || work.primaryimageurl != undefined ) { %>
+        <% worksWithPics.push(work) %>
+        <% } %>
+<% }) %>
+        
+<% worksWithPics.forEach(work => { %>
+    <h4>"<%= work.title %>"</h4>
+    <img src="<%= work.primaryimageurl %>" width="400px">
+<% }) %>
+
