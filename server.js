@@ -34,7 +34,6 @@ app.get("/results", async (req, res) => {
     const results = await axios.get(
       `http://api.harvardartmuseums.org/object?apikey=${MUSEUM_API_KEY}&title=${req.query.search}&size=30`
     );
-    // res.json({ records: results.data.records })
     res.render("results", { records: results.data.records });
   } catch (err) {
     console.log(err);
