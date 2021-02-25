@@ -1,0 +1,6 @@
+<h1>Search Results</h1>
+
+<% records.forEach(record => { %>
+    <h4><%= record.title %> </h4>
+    <img src="<%= record.primaryimageurl %>" alt="<%= record.title %> " width=200px />
+<% }) %>

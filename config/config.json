@@ -1,0 +1,7 @@
+{
+  "development": {
+    "database": "night_at_the_museum",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
