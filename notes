@@ -1,0 +1,31 @@
+npm i
+
+npm init -y
+
+npm i express
+
+npm i sequelize pg rowdy-logger
+
+echo node_modules >> .gitignore
+
+sequelize init 
+
+npm i axios
+
+npm i dotenv
+
+sequelize db:create
+
+npm i ejs
+
+npm i express-ejs-layouts
+
+ npm i method-override
+
+ npm i morgan
+
+ touch server.js
+
+ mkdir views
+
+ mkdir public
