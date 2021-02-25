@@ -1,0 +1,16 @@
+<h1>Here are your popular Works Choices</h1>
+<div class= pop-works>
+<% popularWorks.forEach(works => { %> 
+    <h3>Title: <%=works.title %> </h3>
+    <img src="<%=works.primaryimageurl%>" width="300px" alt="No Image Available">
+    <h5>Division: <%=works.division %></h5>
+    <h5>Culture: <%=works.culture %></h5>
+
+    <form method="POST" action="/popular-works/?_method=DELETE">
+        <input type="hidden" name="id" value="<%=works.id%>">
+        <input type="submit" value="Delete">
+    </form>
+
+<% }) %> 
+
+</div>
