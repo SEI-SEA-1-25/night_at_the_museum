@@ -1,0 +1,28 @@
+{
+  "name": "night_at_the_museum",
+  "version": "1.0.0",
+  "description": "You will create an app that allows the user to put a search term into a field, and see museum works that contain this search term in their titles. As a stretch goal, your app will allow users to add any search results they like to the list of popular works, and allow users to view all popular works.",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express-ejs-layouts": "^2.5.0",
+    "method-override": "^3.0.0",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kchu01/night_at_the_museum.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kchu01/night_at_the_museum/issues"
+  },
+  "homepage": "https://github.com/kchu01/night_at_the_museum#readme"
+}
