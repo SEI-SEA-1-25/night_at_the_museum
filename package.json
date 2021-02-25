@@ -1,36 +1,22 @@
 {
-  "name": "night_at_the_museum",
+  "name": "0",
   "version": "1.0.0",
-  "description": "## Overview",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SEI-SEA-1-25/night_at_the_museum.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SEI-SEA-1-25/night_at_the_museum/issues"
-  },
-  "homepage": "https://github.com/SEI-SEA-1-25/night_at_the_museum#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
-    "method-override": "^3.0.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
-    "pg": "^8.5.1",
-    "rowdy-logger": "^1.0.2",
-    "sequelize": "^6.5.0"
-  },
-  "devDependencies": {
-    "css-loader": "^5.0.2",
-    "style-loader": "^2.0.0"
+    "rowdy-logger": "^1.0.2"
   }
 }

@@ -1,76 +1,20 @@
-require('dotenv').config();
-const NATM_API_KEY = process.env.NATM_API_KEY;
-const axios = require('axios');
-const { default: axios } = require('axios')
 const express = require('express');
 const app = express();
-const ejsLayouts = require('express-ejs-layouts');
-// const rowdy = require('rowdy-logger')
-//                //                      //                  //
-//                   configureing express
-//                //                      //                  //
-const app = express()
-const PORT = 3000
 
-// configure express app
-const app = express()
-const PORT = 3000
-// (╯°□°）╯︵ ┻━┻
-const rowdyResults = rowdy.begin(app)
+// set the view engine to ejs
+app.set('view engine', 'ejs');
 
-// Middlewares
-// Sets EJS as the view engine
-app.set('view engine', 'ejs')
-// Specifies the location of the static assets folder
-app.use(express.static('static'))
-// Enables EJS Layouts middleware
-app.use(ejsLayouts)
-// Sets up body-parser for parsing form data
-app.use(express.urlencoded({ extended: false }))
-// Adds some logging to each request
-app.use(require('morgan')('dev'))
+// use res.render to load up an ejs view file
 
-//                //                      //                  //
-
-//                          ROUTES
-
-// 
-                        home.ejs
-//                //                      //                  //
+// index page
 app.get('/', function(req, res) {
-  res.render('art.ejs', { art: result})
-})
+    res.render('pages/index');
+});
 
+// about page
+app.get('/about', function(req, res) {
+    res.render('pages/about');
+});
 
-
-
-//                //                      //                  //
-//                         RESULTS
-//                //                      //                  //
-
-app.get('/results', () => {
-   console.log(req.body.img_url)
-})
-
-//                //                      //                  //
-//                      
-//                //                      //                  //
-
-
-
-
-
-
-//                //                      //                  //
-//                        404 alert
-//                //                      //                  //
-app.use((req, res, next) => {
-  res.status(404).render('404.ejs')
-})
-//                //                      //                  //
-//                        run server
-//                //                      //                  //
-app.listen(PORT, () => {
-  console.log(`listening on PORT:${PORT}`)
-  rowdyResults.print()
-})
+app.listen(8080);
+console.log('8080 is the magic port');
