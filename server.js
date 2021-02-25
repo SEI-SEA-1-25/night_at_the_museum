@@ -8,6 +8,8 @@ const app = express();
 const PORT = 3000;
 // (╯°□°）╯︵ ┻━┻
 const rowdyResults = rowdy.begin(app);
+require("dotenv").config();
+const OMDB_API_KEY = process.env.OMDB_API_KEY;
 
 // Sets EJS as the view engine
 app.set("view engine", "ejs");
