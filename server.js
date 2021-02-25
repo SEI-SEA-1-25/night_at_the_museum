@@ -16,7 +16,7 @@ app.use(express.static('public'))
 
 
 app.get('/', (req, res) => {
-  res.send('ok')
+  res.render('index.ejs')
 })
 
 const worksController = require('./controllers/worksController')
