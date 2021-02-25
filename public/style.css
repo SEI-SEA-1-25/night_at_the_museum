@@ -1,0 +1,17 @@
+
+
+
+#nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(4, 0, 255);
+    text-decoration: none;
+}
+
+#links {
+    color: white;
+    padding: 5px;
+    font-size: 1.2em;
+}
