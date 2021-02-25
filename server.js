@@ -35,29 +35,29 @@ app.get("/", (req, res) => {
 app.get("/results", async (req, res) => {
   try {
     const results = await axios.get(
-      `www.https://harvardartmuseums.org/collections//?apikey=${MUSE_API_KEY}&s=${req.query.search}`
+      `www.https://api.harvardartmuseums.org/object?apikey=${MUSE_API_KEY}&s=${req.query.search}`
     );
-    res.render("results", { art: results.data.Search });
+    res.render("results", { art: results.data.search });
   } catch (error) {
     console.log("🍎 🍎 🍎 ", error);
   }
 });
 
 //  GET /detail/:artwork_id - render detail of art piece
-app.get("/detail/:artwork_id", async (req, res) => {
+app.get("/details", async (req, res) => {
   try {
     const results = await axios.get(
-      `www.https://harvardartmuseums.org/collections//?apikey=${MUSE_API_KEY}&i=${req.params.artwork_id}`
+      `www.https://api.harvardartmuseums.org/object?apikey=${MUSE_API_KEY}&i=${req.params.id}`
     );
     res.render("detail", { art: results.data });
   } catch (error) {
-    console.log("🍎 🍎  🍎 ", error);
+    console.log("🍎 🍎 🍎 ", error);
   }
 });
 
 // 404 middleware
 app.use((req, res, next) => {
-  console.log("🍎 🍎  🍎 ", error);
+  console.log("🍎 🍎 🍎 ", error);
 });
 
 app.listen(PORT, () => {

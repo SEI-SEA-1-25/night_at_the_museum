@@ -2,7 +2,7 @@
   "name": "night_at_the_museum",
   "version": "1.0.0",
   "description": "## Overview You will create an app that allows the user to put a search term into a field, and see museum works that contain this search term in their titles. As a stretch goal, your app will allow users to add any search results they like to the list of popular works, and allow users to view all popular works.",
-  "main": "dbTest.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
