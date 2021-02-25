@@ -9,7 +9,7 @@ const PORT = 3000;
 // (╯°□°）╯︵ ┻━┻
 const rowdyResults = rowdy.begin(app);
 require("dotenv").config();
-const OMDB_API_KEY = process.env.OMDB_API_KEY;
+const API_KEY = process.env.API_KEY;
 
 // Sets EJS as the view engine
 app.set("view engine", "ejs");
@@ -24,7 +24,7 @@ app.use(require("morgan")("dev"));
 
 // Routes
 app.get("/", function (req, res) {
-  res.send("Hello, backend!");
+  res.render("index.ejs");
 });
 
 // Routes
