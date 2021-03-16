@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "express-ejs-layouts": "^2.5.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  }
+}
