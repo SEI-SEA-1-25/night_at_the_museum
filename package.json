@@ -1,0 +1,22 @@
+{
+  "name": "night_at_the_museum",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint:js": "node_modules/eslint/bin/eslint.js ./ ./**/*.js --fix; exit 0",
+    "lint:css": "node_modules/csslint/cli.js public/css/; exit 0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1",
+    "rowdy": "^0.5.0",
+    "rowdy-logger": "^1.0.2",
+    "sequelize": "^6.5.0"
+  }
+}
