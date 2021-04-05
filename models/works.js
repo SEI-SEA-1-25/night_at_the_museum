@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   work.init({
-    title: DataTypes.STRING,
+    title: DataTypes.TEXT,
     primaryimageurl: DataTypes.TEXT
   }, {
     sequelize,
